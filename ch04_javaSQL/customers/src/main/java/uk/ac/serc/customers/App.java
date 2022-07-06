@@ -37,8 +37,7 @@ public static void main( String[] args )
                     ResultSet resultSet = statement.executeQuery(sql)) {
             
                     while (resultSet.next()) {
-                        customers.add(resultSet.getString(columnLabel: "CustomerID")
-                        + "|" +
+                        
                //     System.out.println(resultSet.getString("CustomerID") + " | "
                // + resultSet.getString("CompanyName") + " | " + resultSet.getString("ContactName"));
                 }
