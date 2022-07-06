@@ -1,4 +1,4 @@
-package uk.ac.serc.northwind;
+package uk.ac.serc.customers;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,8 +35,12 @@ public static void main( String[] args )
             String sql = "SELECT * FROM Customers;";
             try (Statement statement = connection.createStatement();
                     ResultSet resultSet = statement.executeQuery(sql)) {
-                while (resultSet.next()) {
-                    System.out.println(resultSet.getString("CustomerID") + " | " + resultSet.getString("CompanyName") + " | " + resultSet.getString("ContactName"));
+            
+                    while (resultSet.next()) {
+                        customers.add(resultSet.getString(columnLabel: "CustomerID")
+                        + "|" +
+               //     System.out.println(resultSet.getString("CustomerID") + " | "
+               // + resultSet.getString("CompanyName") + " | " + resultSet.getString("ContactName"));
                 }
             }
             connection.close();
