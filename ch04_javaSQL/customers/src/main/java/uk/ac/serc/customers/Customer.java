@@ -1,44 +1,87 @@
 package uk.ac.serc.customers;
 
 public class Customer {
-    
-    String CustomersID, CompanyName, ContactName ;
 
-    public Customer(String customersID, String companyName, String contactName) {
-        CustomersID = customersID;
-        CompanyName = companyName;
-        ContactName = contactName;
+    String customerID;
+    String companyName;
+    String contactName;
+    String contactTitle;
+    String address;
+    String city;
+    String region;
+    String postalCode;
+    String country;
+    String phone;
+    String fax;
+
+    public Customer() {
     }
 
-    public String getCustomersID() {
-        return CustomersID;
+    public Customer(String customerID, String companyName, String contactName, String contactTitle, String address,
+            String city, String region, String postalCode, String country, String phone, String fax) {
+        this.customerID = customerID;
+        this.companyName = companyName;
+        this.contactName = contactName;
+        this.contactTitle = contactTitle;
+        this.address = address;
+        this.city = city;
+        this.region = region;
+        this.postalCode = postalCode;
+        this.country = country;
+        this.phone = phone;
+        this.fax = fax;
     }
 
-    public void setCustomersID(String customersID) {
-        CustomersID = customersID;
+    public String getCustomerID() {
+        return customerID;
     }
 
     public String getCompanyName() {
-        return CompanyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        CompanyName = companyName;
+        return companyName;
     }
 
     public String getContactName() {
-        return ContactName;
+        return contactName;
     }
 
-    public void setContactName(String contactName) {
-        ContactName = contactName;
+    public String getContactTitle() {
+        return contactTitle;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getFax() {
+        return fax;
     }
 
     @Override
     public String toString() {
-        return "Customer [CompanyName=" + CompanyName + ", ContactName=" + ContactName + ", CustomersID=" + CustomersID
-                + "]";
+        return "customerID=" + customerID + "\n companyName=" + companyName + "\n contactName=" + contactName + "\n contactTitle=" + contactTitle + "\n city=" + city + "\n region=" + region + "\n country=" + country;
     }
-
+    
+    
+    
     
 }
